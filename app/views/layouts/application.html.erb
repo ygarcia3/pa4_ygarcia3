@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yliani Garcia - Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "bee.jpg", width: "30", height: "30", class: "d-inline-block align-top" %>
+        Yliani Garcia
+      <% end %>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <%= link_to root_path, class: "nav-link #{'active' if current_page?(root_path)}" do %>
+            <i class="fas fa-home"></i> Home Page
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to about_path, class: "nav-link #{'active' if current_page?(about_path)}" do %>
+            <i class="fas fa-info-circle"></i> About Me
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to hobbies_path, class: "nav-link #{'active' if current_page?(hobbies_path)}" do %>
+            <i class="fas fa-heart"></i> Hobbies
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to favorites_path, class: "nav-link #{'active' if current_page?(favorites_path)}" do %>
+            <i class="fas fa-film"></i> Fav Shows/Movies
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to contact_path, class: "nav-link #{'active' if current_page?(contact_path)}" do %>
+            <i class="fas fa-envelope"></i> Contact
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <span class="text-muted">Thanks for visiting my page. Come Again Soon.</span> <i class="far fa-copyright"></i>
+    </div>
+  </footer>
+</body>
+
