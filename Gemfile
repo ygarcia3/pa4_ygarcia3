@@ -21,7 +21,7 @@ gem 'bootstrap', '~> 5.3'
 gem 'sassc-rails'
 
 # Font Awesome
-gem 'font-awesome-sass', '~> 6.4'
+gem 'font-awesome-sass', '~> 6.7'
 
 # jQuery (needed for Bootstrap JS)
 gem 'jquery-rails'
